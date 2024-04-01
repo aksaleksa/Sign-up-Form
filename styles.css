@@ -1,64 +1,37 @@
-h1, p, label {
+* {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
+    margin: auto;
+    max-width: 1200px;
+    max-height: 1000px;
     display: flex;
     flex-direction: row;
-    height: 100vh;
-    width: 100vw;
-} 
+}
 
-#image {
-    height: 100%;
+#image-container {
     width: 40%;
     background-image: url(fitness.jpg);
     background-size: 500px 700px;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
 }
 
-#banner {
-    width: 100%;
-    height: 20%;
-    margin: auto 0;
-    background-color: rgb(22 67 110 / 30%);
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#credit {
-    font-size: 10px;
-    color: white;
-    margin-bottom: 6%;
-}
-
-#credit a {
-    color: white;
-    text-decoration: none;
-}
-
-#form {
+#form-container {
     margin: auto 0;
     width: 60%;
     height: 100%;
     background-color: white;
 }
 
-#headline {
-    font-size: 20px;
+#cta {
+    font-size: 25px;
+    font-weight: bold;
     padding: 20px;
 }
 
-#cta {
-    font-size: 25px;
+#headline {
+    font-size: 20px;
     padding: 20px;
 }
 
@@ -80,29 +53,22 @@ form {
 }
 
 form p {
-    margin: 0 15%;
+    margin: 0 17%;
     font-size: 25px;
     font-weight: bold;
 }
 
-section {
+form section {
     width: 65%;
-    margin: 0 15%;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-section div {
-    display: inline-block;
+    justify-content: flex-start;
+    gap: 20%;
 }
 
 label, input {
     display: block
-}
-
-#dropdown {
-    margin-right: 17%;
 }
 
 select {
@@ -111,13 +77,13 @@ select {
 
 input, select {
     padding: 5px;
-    border: 1px solid black;
+    border: 2px solid rgb(0, 89, 255);
     border-radius: 3px;
 }
 
 button {
-    padding: 10px 10px;
-    border: 1px solid black;
+    padding: 10px;
+    border: 1px solid white;
     border-radius: 5px;
     display: block;
     color: white;
@@ -134,6 +100,132 @@ button:active {
     background-color: rgb(186, 255, 186)
 }
 
-input:empty {
-    border: 1px solid black;
+button:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    #cta {
+        font-size: 22px;
+        padding: 15px;
+    }
+
+    #headline {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    form p {
+        font-size: 22px;
+    }
+
+    form input {
+        width: 120px;
+    }
+}
+
+@media (max-width: 700px) {
+    #image-container {
+        background-position: center;
+    }
+
+    #cta {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    #headline {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    form p {
+        font-size: 20px;
+    }
+    form section {
+        flex-direction: column;
+        gap: 10px;
+        width: 70%;
+    }
+
+    label, input {
+        display: inline;
+    }
+
+    section div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10%;
+    }
+}
+
+@media (max-width: 525px) {
+    body {
+        background-image: url(fitness.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    #image-container {
+        display: none;
+    }
+
+    #form-container {
+        width: 70%;
+        margin: auto;
+    }
+
+    form section {
+        width: 80%;
+    }
+
+    #cta {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    #headline {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    form div {
+        align-items: center;
+    }
+
+    form p {
+        font-size: 18px;
+    }
+
+    form label {
+        font-size: 15px;
+    }
+
+    form input {
+        width: 100px;
+    }
+}
+
+@media (min-width: 700px) and (max-height: 650px) {
+    #image-container {
+        width: 20%;
+        background-position: center;
+    }
+
+    #form-container {
+        width: 80%;
+    }
+
+    #cta {
+        padding: 15px;
+    }
+
+    #headline {
+        padding: 15px;
+    }
+
+    form input {
+        width: 177px;
+    }
 }

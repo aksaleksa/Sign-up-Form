@@ -9,21 +9,14 @@
 </head>
 
 <body>
-    <div id="image">
-        <div id="banner">Train to win</div>
-        <p id="credit">Photo by <a
-                href="https://unsplash.com/@brett_jordan?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brett
-                Jordan</a> on <a
-                href="https://unsplash.com/photos/exercise-equipments-in-grayscale-photography-U2q73PfHFpM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-        </p>
-    </div>
+    <div id="image-container"></div>
 
-    <div id="form">
+    <div id="form-container">
+        <p id="cta">Sign up to get your free e-book today!</p>
         <p id="headline">
             If you would like to start your weight-loss journey, we'll send a book detailing our
             most effective methods, tricks and tips straight to your inbox. Don't miss out!
         </p>
-        <p id="cta"><b>Sign up to get your free e-book today!</b></p>
         <form action="" method="">
             <p>Let's Go!</p>
             <section>
@@ -65,13 +58,13 @@
                 <div>
                     <label for="confirm_pwd">Confirm Password*</label>
                     <input type="password" id="confirm_pwd" name="confirm_pwd" placeholder="Confirm Password" required>
-                    <p id="pwd_message"></p>
                 </div>
             </section>
+            <p id="pwd_message"></p>
 
             <section>
                 <div>
-                    <button type="submit">Sign Up</button>
+                    <button type="submit" id="submit-button">Sign Up</button>
                 </div>
             </section>
         </form>
