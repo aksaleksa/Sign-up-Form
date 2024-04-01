@@ -30,9 +30,9 @@ function checkPassword() {
 }
 
 submitButton.addEventListener("click", (e) => {
-    e.preventDefault();
     if ((first) && (first === second)) {
         alert(`Hey ${firstName.value}, thanks for signing up. Check your inbox soon for our email.`);
+        e.preventDefault();
     }
 })
 
